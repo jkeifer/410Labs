@@ -1,4 +1,4 @@
-410Lab1
-=======
+GEOG 410/510 Lab Assignment 1: General File Operations
+======================================================
 
-Lab Assignment 1 for GEOG 410/510
+Lab Instructions
