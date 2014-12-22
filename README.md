@@ -24,4 +24,4 @@ Another way to submit assignments is to use git and github. A student can do thi
 1. fork the 410Labs repo, renaming is as 410Lab#, where # is the lab number
 2. create a blank repo named 410Lab#, where # is the lab number, and put all the lab files in that repo
  
-In either case, to complete the submission to me, add jkeifer as a collaborator on the repository. Keep in mind that commit history is public: I will be able to see grade a submission as it was on the due date, even if changes have been made since. BUT PLEASE, do not make changes after the due date even so.
+In either case, to complete the submission to me, add jkeifer as a collaborator on the repository. Keep in mind that commit history is public: I will be able to see grade a submission as it was on the due date, even if changes have been made since. But even so, PLEASE DO NOT MAKE CHANGES after the due date.
