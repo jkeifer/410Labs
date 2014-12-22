@@ -19,4 +19,9 @@ A better way: use git to clone the repo locally. Thus, one can use `git clone <r
 
 Submit completed lab assignments on D2L, following the submission requirements in the lab's instructions. If submitting multiple files, please zip them together. Name the zipfile or any single files as “lastnameFirstname_assignment#”. For example, if I were submitting lab 5, I would zip all my submitted files together and name the zip file “keiferJarrett_lab5.zip”. Failure to follow the proper naming convention will result in lost points.
 
-Another way to submit assignments is to use git and github. A student can do this one of two ways: (1) fork the 410Labs repo, renaming is as 410Lab#, where # is the lab number; or (2) create a blank repo named 410Lab#, where # is the lab number, and put all the lab files in that repo. In either case, to complete the submission to me, add jkeifer as a collaborator on the repository. Keep in mind that commit history is public: I will be able to see grade a submission as it was on the due date, even if changes have been made since. BUT PLEASE, do not make changes after the due date even so.
+Another way to submit assignments is to use git and github. A student can do this one of two ways:
+
+1. fork the 410Labs repo, renaming is as 410Lab#, where # is the lab number
+2. create a blank repo named 410Lab#, where # is the lab number, and put all the lab files in that repo
+ 
+In either case, to complete the submission to me, add jkeifer as a collaborator on the repository. Keep in mind that commit history is public: I will be able to see grade a submission as it was on the due date, even if changes have been made since. But even so, PLEASE DO NOT MAKE CHANGES after the due date.
