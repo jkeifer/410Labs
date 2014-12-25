@@ -1,6 +1,6 @@
 GEOG 410/510 Lab Assignments
 ============================
-for GEOG 410/510: Advanced GIS Programming taught winter 2015 at Portland State University
+for GEOG 410/510: Advanced GIS Programming, taught Winter 2015 at Portland State University
 
 
 **Overview**
