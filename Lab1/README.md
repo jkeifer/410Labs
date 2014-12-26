@@ -15,8 +15,9 @@ The assignment consists of two parts:
 
 Here is an example of two .txt files, and what would be output from these files:
 
-.txt file 1:
+*.txt file 1:*
 
+```
 // this is a text file
 // lines like these are comments
 2
@@ -25,15 +26,18 @@ once. And then he jumped into the air,
 falling into
 the darkness.
 // yet another comment
+```
 
-.txt file 2:
+*.txt file 2:*
 
+```
 1
 I saw Batman
 // comment
 on a roof
+```
 
-What would be output from these two files:
+*What would be output from these two files:*
 
 I saw Batman on a roof once. And then he jumped into the air, falling into the darkness.
 
