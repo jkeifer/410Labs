@@ -57,7 +57,7 @@ on a roof
 > ```
 I saw Batman on a roof once. And then he jumped into the air, falling into the darkness.
 ```
-
+  
 **Tips and Hints**
 
 - Don't reinvent the wheel: standard library modules have functions that will help you.
