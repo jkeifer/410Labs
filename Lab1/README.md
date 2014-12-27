@@ -12,12 +12,12 @@ and some are .txt files with text.
 
 The assignment consists of two parts:
 
-1) Create three directories within the data folder, named shapefiles, rasters, and tables.
+1. Create three directories within the data folder, named shapefiles, rasters, and tables.
 Move all the shapefiles, rasters, and tables in the data directory into the respective
 subfolder you have created. You should not use any GIS libraies to find or move these files
 (i.e., don't use arcpy or anything like it).
 
-2) The .txt files in the data directory are composed of multiple lines of data which needs to
+2. The .txt files in the data directory are composed of multiple lines of data which needs to
 be concatenated in order. The first data line in a file will be a number. All following data
 lines will be strings, and should be concatenated in order, with a space as a separator. Some
 lines in the file may be comments, and marked as such by beginning with a double backslash (//).
