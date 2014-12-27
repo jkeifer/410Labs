@@ -75,3 +75,16 @@ Be sure to move ALL the files corresponding to the .shp or .img files.
 
 You need only submit your completed .py file. See the general lab instructions
 (README in the 410Labs repo) for submission instructions.
+
+
+**Lab Grading**
+
+This lab is worth a total of 21 points. Following the grading breakdown outlined
+in the code guidelines for the course, comments, format/style/readability,
+variable names, and the user interface are each worth up to 3 points. Proper
+programming structures and logic are worth up to 5 points. Meeting the assignment
+requirements outlined above is worth an additional 4 points.
+
+Failure to make a reasonable attempt to complete one of the requirements will result
+in an automatic loss of 50%. Code that does not make a reasonable attempt to address
+the requirements will get an automatic 0.
