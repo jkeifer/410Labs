@@ -67,3 +67,11 @@ I saw Batman on a roof once. And then he jumped into the air, falling into the d
 Be sure to move ALL the files corresponding to the .shp or .img files.
 
 - Be sure to safely close the text files.
+
+- Follow the code guidelines for the course.
+
+
+**What to submit**
+
+You need only submit your completed .py file. See the general lab instructions
+(README in the 410Labs repo) for submission instructions.
