@@ -86,5 +86,5 @@ programming structures and logic are worth up to 5 points. Meeting the assignmen
 requirements outlined above is worth an additional 4 points.
 
 Failure to make a reasonable attempt to complete one of the requirements will result
-in an automatic loss of 50%. Code that does not make a reasonable attempt to address
-the requirements will get an automatic 0.
+in an automatic loss of 10.5 points. Code that does not make a reasonable attempt to address
+any of the requirements will get an automatic 0.
