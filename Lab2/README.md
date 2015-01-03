@@ -11,7 +11,7 @@ and .img raster file formats from the Data folder into a geodatabase (Part 1),
 and to use the geodatabase feature class layers for a short analysis (Part 2).
 
 
-**Part 1: Importer Script**
+**Part 1: Importer Script (14 points)**
 
 The importer should create a file geodatabase, and import the shapefiles and
 raster files in the Data folder into the new geodatabase. The raster files should
@@ -21,7 +21,7 @@ If the importer fails to import a file for some reason, the script should not
 fail, but should continue after reporting the error to the user in a useful manner.
 
 
-**Part 2: Analysis Script**
+**Part 2: Analysis Script (20 points)**
 
 The analysis script will use the feature classes imported into the geodatabase
 created in Part 1, but should be implemented in such a way that changing the
@@ -62,13 +62,15 @@ The script should output two and only two feature classes to the analysis geodat
 - The centroid feature class from step 7
 
 
-**Tips and Hints
+**Tips and Hints**
 
-- Don't forget a try/except in part 1
+- Don't forget a try/except in Part 1.
 
-- Make good use of the ArcGIS `in_memory` workspace for intermediate files
+- Make use of the ArcGIS `in_memory` workspace for intermediate files.
 
-- Feature layers are required for some selection tools in arcpy
+- Feature layers are required for some selection tools in arcpy.
+
+- Follow the code guideline for the course.
 
 
 **What to submit**
@@ -79,13 +81,18 @@ You need only submit your completed .py files. See the general lab instructions
 
 **Lab Grading**
 
-This lab is worth a total of 23 points. Following the grading breakdown outlined
-in the code guidelines for the course, comments, format/style/readability,
-variable names, and the user interface are each worth up to 3 points. Proper
-programming structures and logic are worth up to 5 points. Meeting the assignment
-requirements outlined above is worth an additional
-6 points (2 points Part 1, 4 points Part 2).
+This lab is worth a total of
+34 points:
+14 points for Part 1 and
+20 points for Part 2.
+Following the grading breakdown outlined in the code guidelines for the course,
+comments, format/style/readability, variable names, and the user interface are
+each worth 12.5 percent of the points. Proper programming structures and logic
+are worth 25 percent of the total. Meeting the assignment
+requirements outlined above is worth an additional 25 percent.
 
-Failure to make a reasonable attempt to complete one of the parts of the lab  will result
-in an automatic loss of all points for that part (Part 1: 10.5 points, Part 2: 12.5 points).
-Code that does not make a reasonable attempt to address any part of the lab will get an automatic 0.
+Failure to make a reasonable attempt to complete
+one of the parts of the lab  will result
+in an automatic loss of all points for that part.
+Code that does not make a reasonable attempt to address
+any part of the lab will get an automatic 0.

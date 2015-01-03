@@ -57,7 +57,6 @@ on a roof
 > ```
 I saw Batman on a roof once. And then he jumped into the air, falling into the darkness.
 ```
-
   
 **Tips and Hints**
 
@@ -79,12 +78,18 @@ You need only submit your completed .py file. See the general lab instructions
 
 **Lab Grading**
 
-This lab is worth a total of 21 points. Following the grading breakdown outlined
+This lab is worth a total of
+21 points:
+9 for part 1 and
+12 for part 2.
+Following the grading breakdown outlined
 in the code guidelines for the course, comments, format/style/readability,
-variable names, and the user interface are each worth up to 3 points. Proper
-programming structures and logic are worth up to 5 points. Meeting the assignment
-requirements outlined above is worth an additional 4 points.
+variable names, and the user interface are each worth 12.5 percent of the points. Proper
+programming structures and logic is worth 25 percent of the total.
+Meeting the assignment requirements outlined above is worth an
+additional 25 percent of the score.
 
-Failure to make a reasonable attempt to complete one of the requirements will result
-in an automatic loss of 10.5 points. Code that does not make a reasonable attempt to address
-any of the requirements will get an automatic 0.
+Failure to make a reasonable attempt to complete one of the two parts
+of the lab will result in an automatic loss of all points for that part.
+Code that does not make a reasonable attempt to address any part of the
+lab will get an automatic 0.
