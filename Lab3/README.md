@@ -30,13 +30,13 @@ nullable text field to the feature class.
 
 The new field is what you will update depending on the following conditions:
 
-    - If the OID is divisible by 3, write `Fizz` to the new field
+- If the OID is divisible by 3, write `Fizz` to the new field
 
-    - If the OID is divisible by 5, write `Buzz` to the new field
+- If the OID is divisible by 5, write `Buzz` to the new field
 
-    - If the OID is divisible by 3 AND 5, write `FizzBuzz` to the new field
+- If the OID is divisible by 3 AND 5, write `FizzBuzz` to the new field
 
-    - If none of the above condition have been met, but the _____________________, write `BuzzFizz` to the new field
+- If none of the above condition have been met, but the _____________________, write `BuzzFizz` to the new field
 
 
 **Filtering the Centroid Points**
@@ -59,14 +59,14 @@ may prove useful.
 
 The points stored in the text file are in Lat/Long format, separated by a space:
 
-    >43.5667 -132.5544
+    43.5667 -132.5544
 
 Import these coordinates as point geometry obejcts (remember they are WGS84).
 See which fall within 100 feet of the constructed polyline object.
 For each point, the script should output its coordinates and whether it is
 within the given distance, like so:
 
-    >Lat: 43.5667, Long: -132.5544, Within Specified Distance: True (or False)
+    Lat: 43.5667, Long: -132.5544, Within Specified Distance: True (or False)
 
 
 **Tips and Hints**
