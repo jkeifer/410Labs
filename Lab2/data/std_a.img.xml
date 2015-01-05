@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20150104</CreaDate><CreaTime>15284500</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Conversion Tools.tbx\PolygonToRaster" Date="20150104" Time="152845">PolygonToRaster study_area FID Z:\Documents\Dropbox\School_Dropbox\Teaching\GEOG410\Labs\410Labs\Lab2\data\std_a.img MAXIMUM_COMBINED_AREA NONE 2500</Process></lineage></DataProperties></Esri></metadata>

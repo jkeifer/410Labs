@@ -7,9 +7,9 @@ for GEOG 410/510 winter term 2015
 
 Lab 3 is all about working with cursors and geometry objects.
 The data for this lab comes from two sources: the centroid points
-created from Lab 2 (but use the version in the Data folder to
-ensure you have the correct data), and a text file of Lat/Long
-coordinates in the WGS84 GCS.
+created from Lab 2 (but use the version in data.gdb in the data
+folder to ensure you have the correct data), and a text file of
+Lat/Long coordinates in the WGS84 GCS.
 
 Your job is to update the attributes of the centroids using an update
 cursor for some given conditions. Once that is complete, you can filter
@@ -30,13 +30,19 @@ nullable text field to the feature class.
 
 The new field is what you will update depending on the following conditions:
 
-- If the OID is divisible by 3, write `Fizz` to the new field
+- If the OID is divisible by 31,
+  write `Fizz` to the new field
 
-- If the OID is divisible by 5, write `Buzz` to the new field
+- If the OID is divisible by 33,
+  write `Buzz` to the new field
 
-- If the OID is divisible by 3 AND 5, write `FizzBuzz` to the new field
+- If the OID is divisible by 31 AND 33,
+  write `FizzBuzz` to the new field
 
-- If none of the above condition have been met, but the _____________________, write `BuzzFizz` to the new field
+- If none of the above condition have been met,
+  choose a random integer between 0 and 99.
+  If that integer is equal to 57,
+  write `BuzzFizz` to the new field
 
 
 **Filtering the Centroid Points**
@@ -47,26 +53,38 @@ you added. That is, if the added field of a point contains
 `Fizz`, `Buzz`, `FizzBuzz`, or `BuzzFizz`, then select that point.
 
 
-**Build a line**
+**Build a Line**
 
-Using the selected point features above, create a polyline geometry object.
+Using the selected point features above, create a polyline geometry
+object. The line you create should connect each point to the nearest
+point, never reusing a point. If two or more points are the same
+distance apart, you can choose which to use. Start your line
+with the northern-most point (measured using the CRS of the centroids FC).
+
 Perhaps a dict of point geometry objects would be good for this
 exercise...Remember that point geometry objects have methods that
-may prove useful.
+may prove useful. You must use geometry objects for this task.
+Do not use any toolbox tools that might do something similar.
+
+Once you have constructed your line object, use `CopyFeatures_management()`
+to output your line as a feature class in data.gdb.
 
 
 **Import the Text Point Features**
 
-The points stored in the text file are in Lat/Long format, separated by a space:
+Each point stored in the text file has its ID, Longitude,
+and Latitude, separated by a comma:
 
-    43.5667 -132.5544
+    1,-132.5544,43.2556
 
 Import these coordinates as point geometry obejcts (remember they are WGS84).
-See which fall within 100 feet of the constructed polyline object.
-For each point, the script should output its coordinates and whether it is
-within the given distance, like so:
+See which fall within 1 Mile of the constructed polyline object.
+Your script should produce a text file reporting the results.
+For each point, the script should create a new line in the text file with the
+ID of the point and an indication of whether or not it falls within the given
+distance, like so:
 
-    Lat: 43.5667, Long: -132.5544, Within Specified Distance: True (or False)
+    1 True (or False)
 
 
 **Tips and Hints**
@@ -76,7 +94,10 @@ within the given distance, like so:
   but as long as your code is readable and understandable,
   any way that works is sufficient.
 
-- You do not need to output any feature classes; you only need to modify the centroid feature class.
+- Check out the `random` module for choosing a random integer.
+
+- Your only output should be a copy of your line and the text report;
+  the centroid feature class should be modified in place.
 
 - Geometry objects have methods.
 
@@ -85,14 +106,14 @@ within the given distance, like so:
 
 **What to submit**
 
-You need only submit your completed .py file.
+For this lab you must submit your completed .py file, your data.gdb, and your output report.
 See the general lab instructions (README in the 410Labs repo) for submission instructions.
 
 
 **Lab Grading**
 
 This lab is worth a total of
-30 points.
+32 points.
 Following the grading breakdown outlined in the code guidelines for the course,
 comments, format/style/readability, variable names, and the user interface are
 each worth 12.5 percent of the points. Proper programming structures and logic

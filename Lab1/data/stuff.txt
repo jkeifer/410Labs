@@ -1,0 +1,8 @@
+// this is the person who said this
+// and the source
+4
+-- Frank Herbert, from the book
+Dune,
+// and what he was talking about
+speaking about overcoming his fear of
+programming by using python, obviously.

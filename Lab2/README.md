@@ -7,16 +7,14 @@ for GEOG 410/510 winter term 2015
 
 Lab 2 consists of two parts, and each part requires a separate script.
 The overall goal of this lab is to import some existing data layers in shapefile
-and .img raster file formats from the Data folder into a geodatabase (Part 1),
+and .img raster file formats from the data folder into a geodatabase (Part 1),
 and to use the geodatabase feature class layers for a short analysis (Part 2).
 
 
 **Part 1: Importer Script (14 points)**
 
-The importer should create a file geodatabase, and import the shapefiles and
-raster files in the Data folder into the new geodatabase. The raster files should
-be moved into a feature dataset named "Rasters", and should have the spatial
-reference ___________.
+The importer should create a file geodatabase in the output folder,
+and import the shapefiles and raster files in the data folder into the new geodatabase.
 If the importer fails to import a file for some reason, the script should not
 fail, but should continue after reporting the error to the user in a useful manner.
 
@@ -30,28 +28,31 @@ the following steps:
 
 1. Check to ensure the analysis geodatabase has the required layers:
     - at least one point layer
-    - at least one line layer
-    - a layer named "study_area"
+    - at least one polyline layer
+    - a layer named `study_area`
 
 2. Buffer each point layer in the geodatabase.
-   Only features in a layer with the field "buff_enabled" set to "True" should be buffered.
-   The buffer distance should be set using the values in the "buff_dist" field.
+   Only features in a layer with the field `toBuff` set to "True" should be buffered.
+   The buffer distance should be set using the values in the `buff_dist` field.
 
 3. Merge all buffer polygon layers into a single polygon layer. It does not matter
    if the features are dissolved into a single feature, or remain separated.
 
-4. Buffer each point layer in the geodatabase.
-   Only buffer lines greater than 250 feet in length that also fall within
-   the polygons in the "study_area" feature class.
-   The buffer distance should be 1,000 feet, and should be on both sides of the lines,
-   and should cap the ends of the lines.
+4. Buffer each polyline layer in the geodatabase.
+   Only buffer lines greater than 9,000 feet in length (query the `LENGTH` field)
+   also intersected by the polygons in the `study_area` feature class.
+   The buffer should be 1 Mile, should be on both sides of the lines (`"FULL"`),
+   and should cap the ends of the lines (`"ROUND"`).
 
 5. The buffer layers from the line features should be merged into a single feature
-   class. The features should not be dissolved together, but should remain separate.
+   class. The features should not be dissolved together.
 
 6. Erase the merged point buffers layer from the merged line buffers layer.
 
-7. Create a fishnet grid with a 200-foot by 200-foot cell size.
+7. Create a fishnet grid of geometry type polygon with a
+   5000-foot by 5000-foot cell size.
+   The extent should match the extent of the erase results feature class.
+   Do not generate label points.
    Intersect the grid with the erase results, and find the centroids of the
    resulting polygons. Report the number of centroids to the user.
 

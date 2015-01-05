@@ -1,0 +1,13 @@
+// If you are reading this
+// then you know lines like this
+// are comments.
+//
+// The number below is the position
+// of this data in the sequence:
+3
+the fear has
+gone there will
+be nothing. Only
+// comment
+I will remain.”
+// end of this file
