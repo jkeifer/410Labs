@@ -59,7 +59,7 @@ the following steps:
    **Record the number of centroids as reported by your script, and add the
    number to your header comment in your script on a line like:**
 
-      # Centroid count: <number of centroids>
+       # Centroid count: <number of centroids>
 
 The script should output two and only two feature classes to the analysis geodatabase:
 
