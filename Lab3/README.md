@@ -14,11 +14,11 @@ Lat/Long coordinates in the WGS84 GCS.
 Your job is to update the attributes of the centroids using an update
 cursor for some given conditions. Once that is complete, you can filter
 the centroid points as specified. Using the filtered points, you will
-build a line geometry by finding the nearest points and conencting them.
+build a line geometry by finding the nearest points and connecting them.
 
 Once the line is completed, you'll need to import the Lat/Lot coordinates
 in the text file as point objects, then see which of the points are within
-100 feet of the line object you created. The script will output the coordinates
+1 mile of the line object you created. The script will output the coordinates
 of each point on a separate line, also indicating whether the points is within
 the given distance of the line.
 
@@ -51,7 +51,12 @@ Once you have updated the attributes of the centroid features,
 filter them by keeping all points that are not null in the field
 you added. That is, if the added field of a point contains
 `Fizz`, `Buzz`, `FizzBuzz`, or `BuzzFizz`, then select that point.
+Please have your script print the number of points after filtering,
+and record that number. Then, add that number as a comment in your
+script's intro comment block so I can see it when grading, formatted
+something like this:
 
+    # Filtered point count: <the count>
 
 **Build a Line**
 
@@ -61,13 +66,16 @@ point, never reusing a point. If two or more points are the same
 distance apart, you can choose which to use. Start your line
 with the northern-most point (measured using the CRS of the centroids FC).
 
-Perhaps a dict of point geometry objects would be good for this
-exercise...Remember that point geometry objects have methods that
-may prove useful. You must use geometry objects for this task.
+Remember that point geometry objects have methods that may prove useful.
+You must use geometry objects for this task.
 Do not use any toolbox tools that might do something similar.
 
 Once you have constructed your line object, use `CopyFeatures_management()`
-to output your line as a feature class in data.gdb.
+to output your line as a feature class in data.gdb. Additionally,
+have your script print the length of your line; record this length
+and add it at the top of your script in the intro comments like:
+
+    # Line length: <your line's length>
 
 
 **Import the Text Point Features**
@@ -79,7 +87,7 @@ and Latitude, separated by a comma:
 
 Import these coordinates as point geometry obejcts (remember they are WGS84).
 See which fall within 1 Mile of the constructed polyline object.
-Your script should produce a text file reporting the results.
+Your script should produce a new text file reporting the results.
 For each point, the script should create a new line in the text file with the
 ID of the point and an indication of whether or not it falls within the given
 distance, like so:
