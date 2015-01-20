@@ -56,6 +56,11 @@ the following steps:
    Intersect the grid with the erase results, and find the centroids of the
    resulting polygons. Report the number of centroids to the user.
 
+   **Record the number of centroids as reported by your script, and add the
+   number to your header comment in your script on a line like:**
+
+      # Centroid count: <number of centroids>
+
 The script should output two and only two feature classes to the analysis geodatabase:
 
 - The results of the erase operation from step 6
