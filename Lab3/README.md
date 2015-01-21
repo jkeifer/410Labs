@@ -107,13 +107,18 @@ to accomplish this task.
 
 - Check out the `random` module for choosing a random integer.
 
-- Your only output should be a copy of your line and the text report;
-  the centroid feature class should be modified in place.
+- The only output of your final script should be a copy of your
+  line as a feature class in the geodatabase and the text report;
+  the centroid feature class should be modified in place. However,
+  you might find it useful to produce intermediate copies of your
+  geometries while debugging to facilitate finding errors.
 
-- Geometry objects have methods.
+- Geometry objects have methods. If you don't know what they are,
+  read the docs.
 
-- When importing the points from the text file, ensure the coordinates
-  are in the correct order, i.e., (x, y).
+- It sounds silly, but when importing the points from the text file,
+  ensure the coordinates are in the correct order, i.e., (x, y).
+  Double checking will save you pain, if not this time then the next.
 
 - A dictionary may be useful when importing the text file points.
 
