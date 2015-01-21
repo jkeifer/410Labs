@@ -94,6 +94,9 @@ distance, like so:
 
     1 True (or False)
 
+You may not use any toolbox tools, such as `Buffer_analysis`,
+to accomplish this task.
+
 
 **Tips and Hints**
 
@@ -108,6 +111,13 @@ distance, like so:
   the centroid feature class should be modified in place.
 
 - Geometry objects have methods.
+
+- When importing the points from the text file, ensure the coordinates
+  are in the correct order, i.e., (x, y).
+
+- A dictionary may be useful when importing the text file points.
+
+- Recursion may be a useful approach to building the line.
 
 - Follow the code guideline for the course.
 
