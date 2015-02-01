@@ -92,14 +92,14 @@ the following arguments:
 
 - Soil: each soil type is represented by an integer code in the
   soil raster data, and it is important to note that multiple
-  types of soils all be adaquate; this argument should be an
-  integer representing an allowable soil code in the soil raster;
-  this argument is required, and should allow multiple values
+  types of soils could be adaquate; thus, this argument should be an
+  integer representing an allowable soil code in the soil raster,
+  should be required, and should allow multiple values
 
 - Area: a float representing the minimum size of a parcel meeting
   the above requirements; required
 
-The data in your geodatabase can be assumed to always have the same
+The data layers in your geodatabase can be assumed to always have the same
 names (i.e., make the required layer names constants). Your analysis
 should, after getting the user arguments, check to make sure the
 specified geodatabase exists and has all the required layers (unlike
@@ -124,6 +124,8 @@ following values to produce the final output:
 
 - Minimum site area: 40,000 square meters
 
+[Note: all data have linear and vertical units in meters.
+No conversions should be required.]
 
 Also, keep the following in mind:
 
@@ -131,23 +133,32 @@ Also, keep the following in mind:
 
 - Do not include cells where the distance to a water feature is 0.
   Not all of the cell will be available for building and/or accessible.
+  (This requirement may be implicitly met depending on your analysis method).
 
 - Always use the elevation raster as the template for output cell resolution
-  to ensure your raster layers will line up correctly.
+  to ensure your raster layers will have the same registration and resolution.
 
-- When you convert your raster to polygons, do not simplify them.
+- When you convert your raster to polygons, do not simplify the polygons.
 
 The final output of the script should be a feature class
 containing polygons of all suitable areas. All intermediate layers should
 be considered temporary and should not persist after the completion of
-the script.
+the script (for testing you may desire a boolean option you can set that,
+if true, will turn on debug mode, and the intermediate rasters will be
+saved to your output workspace).
 
 You will also need to make a map of the resultant suitable area,
 including the relevant layers that contributed to the analysis:
 elevation (DEM; can be hillshade if desired), water sources,
 and soil (try transparency on top of the elevation layer). Follow
 good cartographic principles. Produce the map in PDF format for
-your submission.
+your submission. The data sources are as follows:
+
+- Elevation: University of Washington/USGS
+
+- Water: National Hydrography Dataset from USGS
+
+- Soils: these data are manufactured
 
 
 **Tips and Hints**
