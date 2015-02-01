@@ -40,8 +40,11 @@ To that end, you compile a list of things your basic clients request:
 - Soil: the required soil types will depend on the dietary needs
   of the mountain man and what he will want to grow.
 
-Lastly, the area of the combination of all these factors must meet
-the size of shack and garden the mountain man is seeking to find.
+Lastly, the area of the any sites meeting the combination of
+these factors must also meet the minimum plot area, as defined
+by the size of shack and garden the mountain man is seeking to find,
+as well as any additional land uses the mountain man may have (such
+as pasture for a horse, a smoke house, or firewood storage).
 
 
 **A Less-Silly Look at Part 1: Importing the Data (5 Points)**
