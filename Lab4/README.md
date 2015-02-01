@@ -2,12 +2,13 @@ Lab 4: Raster analysis with arcpy
 =================================
 for GEOG 410/510 winter term 2015
 
+
 **Lab 4 Overview**
 
 Imagine you are a GIS professional working for
 Mountain Man Housing Intl, LLC. In a typical day you respond
 to many requests from mountain men around the country looking
-for suitable locations for thier mountain shacks. Currently, you
+for suitable locations for their mountain shacks. Currently, you
 complete all of the required analysis manually, but given some
 recent python classes you believe a python script could
 automate many of the standard requests you encounter from your
@@ -16,7 +17,7 @@ mountain man clients.
 In thinking through the design of such a python script, your first
 thought is that it would be good to organize your data in a file
 geodatabase. Normally you find all the data sources required for an
-analysis, and drop them in a folder in shapefile and .img formats.
+analysis and drop them in a folder in shapefile and .img formats.
 Thus, you recognize you will need to write a script to import all
 the data files for each analysis in to a geodatabase.
 
@@ -107,17 +108,30 @@ proceed with the analysis, finding any areas that meet all of the
 requirements. For the purpose of this assignment, you should use the
 following values to produce the final output:
 
-- Max water distance:
+- Max water distance: 300 meters
 
-- Minimum elevation:
+- Minimum elevation: 1500 meters
 
-- Maximum elevation:
+- Maximum elevation: 2000 meters
 
-- Maximum slope:
+- Maximum slope: 8.0 degrees 
 
-- Suitable soil types: 1, 4 and 5
+- Suitable soil types: 2, 6, 10, 20, and 42
 
-- Minimum site area:
+- Minimum site area: 40,000 square meters
+
+
+Also, keep the following in mind:
+
+- The processing extent should be equal to the elevation raster extent.
+
+- Do not include cells where the distance to a water feature is 0.
+  Not all of the cell will be available for building and/or accessible.
+
+- Always use the elevation raster as the template for output cell resolution
+  to ensure your raster layers will line up correctly.
+
+- When you convert your raster to polygons, do not simplify them.
 
 The final output of the script should be a feature class
 containing polygons of all suitable areas. All intermediate layers should
@@ -144,8 +158,17 @@ your submission.
   the user's command line arguments, including allowing defaults,
   type checking, optional arguments, and multiple values.
 
-- If you are unsure how to approach building a query from a list
-  of unknown length, perhaps check the example in Demo 1...
+- To get all the acceptable soil values in one operation,
+  you could use the `sa.Test()` function, but you will have
+  to build a query from a variable length list. That is, the
+  query will need to accept a variable number of soil types
+  to find. A solution to this problem was presented in Demo 1.
+  Alternatively, you could use a string join, similar to
+  `" AND ".join(list)`.
+
+- Depending on how you accomplish these analysis tasks, you may
+  want to `sa.setNull` any pixels that do not meet your analysis
+  requirements before converting to vector.
 
 - The only output of your final script should be your suitable
   area feature class. All other layers/datasets produced during
@@ -157,8 +180,8 @@ your submission.
 **What to submit**
 
 For this lab you must submit your
-completed .py files
-a map of your suitable site (following good cartographic principles)
+completed .py files and
+a map of your suitable site (follow good cartographic principles) in PDF format
 in a zip folder named <lastname><firstname>_lab4.zip.
 See the general lab instructions (README in the 410Labs repo) for submission instructions.
 
@@ -167,11 +190,15 @@ See the general lab instructions (README in the 410Labs repo) for submission ins
 
 This lab is worth a total of
 30 points.
-Following the grading breakdown outlined in the code guidelines for the course,
-comments, format/style/readability, variable names, and the user interface are
-each worth 12.5 percent of the points. Proper programming structures and logic
+Following the grading breakdown outlined in the code
+guidelines for the course, comments, format/style/readability,
+variable names, and the user interface are each worth
+12.5 percent of the points. Proper programming structures and logic
 are worth 25 percent of the total. Meeting the assignment
 requirements outlined above is worth an additional 25 percent.
 
 Code that does not make a reasonable attempt to address
-any part of the requirements above will get an automatic 0.
+one of the two parts of the lab will lose all points for the
+omitted part. A submission that does not make a reasonable
+attempt to address any part of the requirements above
+will get an automatic 0.
